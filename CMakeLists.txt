@@ -32,6 +32,8 @@ set(PROJECT_SOURCES
         qml.qrc
         settings.cpp
         settings.h
+        logger.cpp
+        logger.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
