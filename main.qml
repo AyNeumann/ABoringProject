@@ -9,11 +9,7 @@ ApplicationWindow {
     visible: true
     title: qsTr("A Boring Project")
 
-    header: ToolBar {
-        B_Toolbar {
-
-        }
-    }
+    menuBar: B_Toolbar {}
 
     Rectangle {
         id: sideMenu

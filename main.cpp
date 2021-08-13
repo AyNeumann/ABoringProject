@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QObject>
 #include "settings.h"
 #include "logger.h"
 
@@ -12,11 +13,11 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    Settings appSettings(&app, app.applicationDirPath());
+    Logger logger(&app);
 
     Logger::enableLogger(true);
 
-    qInfo() << "This is a test info logging";
+    Settings appSettings(&app, app.applicationDirPath());
 
     QString filename = app.applicationDirPath() + "/settings2.ini";
     QMap<QString, QVariant> value;
